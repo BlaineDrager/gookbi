@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition 속성</title>
+    <style>
+        .box{
+            left: 0;
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            transition-duration: 3050ms;/*변화하는데 걸리는 시간을 지정 s 는 초 ms 마이크로 초이다*/
+        }
+        .box:active{
+            width: 100vw;            
+        }
+        .box.a {
+            top: 0;
+            background-color: #ec7063;
+            transition-delay: 500ms; /*변화하기까지 걸리는 시간을 지정*/
+        }
+        .box.b {
+            border: 0.7rem solid #000000;
+            border-radius: 2rem;
+            background-color: #bb55ff;
+            position: absolute;
+            top: 2rem;
+            transition-timing-function: ease; 
+            /* linear 일정한 속도로 진행
+               ease 첫과 끝은 느리지만 중간은 빠르게 진행 ease-in-out 보다 가파르게 진행
+               ease-in 처음은 느리지만 이후 점점 빠르게 진행
+               ease-out 처음은 빠르게 이후 점점 느리게 진행
+               ease-in-out ease와 같은 형식이지만 ease 보다 완만하게 진행한다. */
+        }
+    </style>
+</head>
+<body>
+    <div class="box a"></div>
+    <div class="box b"></div>
+</body>
+</html>

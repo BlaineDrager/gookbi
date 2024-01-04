@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>caption, col, colgroup, table, tbody, td, tfoot, thead, tr 태그</title>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>  <!-- 행부터 정의 -->
+                <th rowspan="2">지역</th><!-- rowspan으로 본인 포함 2행을 차지하는 칸이 만들어지는데 아래의 tr에 있는 th에도 영향을 미친다.-->
+                <!-- <th scope="col">지역</th> -->
+                <!--scope="col"를 통해 세로방향을 대표함을 알린다.-->
+                <!-- 대표이름이 들어가는 셀을 만들어 줌 -->
+                <th colspan="2">2022</th>
+            </tr>
+            <tr>
+                <th scope="col">인구</th>
+                <th scope="col">인구 밀도</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">서울</th><!--scope="row"를 통해 가로방향을 대표함을 알린다.-->
+                <td>9411</td><!-- 실제 데이터를 담는 용으로 사용하는 셀을 만들어줌-->
+            </tr>
+            <tr>
+                <th scope="row">대전</th>
+                <td>1472</td>
+            </tr>
+            <tr>
+                <th scope="row">대구</th>
+                <td>2363</td>
+            </tr>
+            <tr>
+                <th scope="row">부산</th>
+                <td>3299</td>
+            </tr>
+            <tr>
+                <th scope="row">광주</th>
+                <td>1463</td>
+            </tr>
+            <tr>
+                <th scope="row">울산</th>
+                <td>1113</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th scope="row">합계</th>
+                <td>19121</td>
+            </tr>
+            <tr>
+                <th scope="row">평균</th>
+                <td>3186.833</td>
+            </tr>
+        </tfoot>
+    </table>
+
+
+
+    <caption></caption>
+    <col>
+    <colgroup></colgroup>
+    <table></table>
+    <tbody></tbody>
+    <td></td>
+    <tfoot></tfoot>
+    <thead></thead>
+    <tr></tr>
+</body>
+</html>

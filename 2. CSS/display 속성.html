@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display 속성</title>
+    <style>
+        a {
+            width: 300px;
+            height: 150px;
+            background-color: #c0c0c0;
+            display: inline;/*inline만 넣을 경우 위의 크기 조절이 먹히지 않는다 그러기에 inline-block을 통해서 크기조절이 가능하면서 inline의 형식 (줄 자체를 차지하지 않는)이 가능해 진다*/
+            /* display: none; 의 경우에는 자리차지 조차도 안한다는 말이다 */
+        }
+    </style>
+</head>
+<body>
+    <a>a 태그 이다</a> <!---->
+    <a>a 태그 이다</a>
+    <a>a 태그 이다</a>
+    <a>a 태그 이다</a>
+    <a>a 태그 이다</a>
+</body>
+</html>

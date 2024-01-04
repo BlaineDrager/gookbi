@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>google</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+
+            font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, Roboto, "Noto Sans KR", "Segoe UI", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+            align-items: stretch;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        #header {
+            padding: 0.75rem 0.375rem; /*해당 공간의 내부 크기를 지정 margin의 경우 외부 크기를 지정*/
+            background-color: wheat;/*확인용*/
+        }
+        
+        #header > .nav > .menu {
+            font-size: 0.9rem; /*폰트의 크기 조절*/
+
+            margin-inline: 0; /* inline 속성의 margin을 적용 */
+            margin-block: 0; /* block 속성의 margin을 적용 */
+            padding-inline: 0; /* inline 속성의 padding을 적용 */
+
+            align-items: center;
+            display: flex; /*display의 속성을 flex로 지정한다*/
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+        #header > .nav > .menu > .item {
+            color: inherit;
+        }
+
+        #header > .nav > .menu > .item.login {
+            width: 2rem;
+            height: 1rem;
+            background-color: #5555ee;
+            
+            
+        }
+
+        #header > .nav > .menu > .spring {
+            flex-grow: 1;
+        }
+
+        #main {
+            flex-grow: 1; /* 각 공간의 거리를 지정해 주는 것*/
+            
+            background-color: grey;
+            align-items: center;
+            display: flex;
+            flex-direction: ;
+            justify-content: flex-start;
+        }
+
+        #footer {
+            background-color: bisque;
+
+            align-items: stretch;
+            display: flex; /*자식요소 배치*/
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        #footer > .menu {
+            
+
+            margin-block: 0; /*block 요소의 외부 여백을 설정*/
+            margin-inline: 0; /*inline 요소의 외부 여백을 설정*/
+            padding-inline: 0; /*inline 요소의 내부 여백 설정 ul 태그로 인해 나타나는 * 를 지우는 역할도 겸한다*/
+        }
+    </style>
+</head>
+<body>
+    <header id="header">
+        <nav class="nav"><!--관련 있는 링크를 모아두기 위한 태그-->
+            <ul class="menu">
+                <li class="item">
+                    <a href="" class="link">Google 정보</a>
+                </li>
+                <li class="item">
+                    <a href="" class="link">스토어</a>
+                </li>
+                <li class="spring"></li>
+                <li class="item">
+                    <a href="" class="link">Gmail</a>
+                </li>
+                <li class="item">
+                    <a href="" class="link">이미지</a>
+                </li>
+                <li class="item">
+                    앱 종류
+                </li>
+                <li class="item">
+                    <a href="" class="link login">로그인</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main id="main">
+        메인
+    </main>
+    <footer id="footer">
+        <div class="region">대한민국</div>
+        <ul class="menu">
+            <li>
+                <a href="#" class="link">광고</a>
+            </li>
+            <li>
+                <a href="#" class="link">비즈니스</a>
+            </li>
+            <li>
+                <a href="#" class="link">검색의 원리</a>
+            </li>
+            <li class="spring"></li>
+            <li>
+                <a href="#" class="link">개인정보처리방침</a>
+            </li>
+            <li>
+                <a href="#" class="link">약관</a>
+            </li>
+            <li>
+                <a href="#" class="link">설정</a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>

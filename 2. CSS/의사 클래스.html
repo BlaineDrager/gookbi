@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>의사 클래스</title>
+    <style>
+        .parent > .child:first-child {
+            color: red;
+        }
+        .parent > span.child:first-child {
+            color: red;
+        }
+        /* child.nth-child() {}에서 ()안에 1부터 시작하며 odd 혹은 even을 통해서 어느 구간에 넣을 것인지 정할 수 있다*/
+        .parent > .child:last-child {
+            color: blue;
+        }
+        .fa:focus {
+            background-color: violet;
+        }
+        .fb:focus {
+            background-color: blueviolet; /*영향을 받지 않는다*/
+        }
+        form {
+            background-color: #d0d0d0;
+        }
+        form:focus-within {
+            background-color: blue;
+        }
+        .parent > .child:not(:focus) {
+            background-color: #3e51a2;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">1</div>
+        <span class="child">2</span>
+        <div class="child">3</div>
+        <span class="child">4</span>
+        <div class="child">5</div>
+        <span class="child">6</span>
+    </div>
+    <input type="text" class="fa">
+    <div class="fb">asdfasdf</div>
+    <form>
+        <input type="text">
+        <div>abcabcc</div>
+        <span>sdfsdf</span>
+    </form>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform 속성</title>
+    <style>
+        .box{
+            width: 200px;
+            height: 100px;
+            border: 1rem solid #3af3f1;
+            border-radius: 3rem;
+            background-color: #666666;
+            transition-duration: 2000ms;
+            transition-timing-function: linear;
+        }
+        .box:hover{
+            transform: rotateY(360deg); /*y 축을 기준(|)으로 돌리는 것으로 좌우의 변화가 생긴다 rotateX 는 x 축에 막대(ㅡ)를 꽂아 회전시키는 형식  */
+        }
+        .box:active {
+            transform: rotateX(360deg); /*x 축을 기준으로 돌리는 것으로 위아래의 변화가 생긴다 */
+            transform: rotateZ(180deg); /*z 축을 기준으로 돌리는 것으로 화면을 기준으로 일반적인 회전의 변화가 생긴다 */
+            transform: scale(120%);
+            /* 확대 및 축소를 위 해사용하는 것으로 100%위로가면 확대 아래로가면 축소된다*/ 
+            /*transform은 한가지만 사용할 수 있다*/
+            
+        }
+        .box.a {
+            width : 200px;
+            background-color: dodgerblue;
+        }
+        .box.a:hover {
+            transform: translateY(150%);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box a"></div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background 속성</title>
+    <style>
+        span {
+            background-color: #00adef;
+            color: #ffffff;
+            height: 50px;
+        }
+        span:hover {
+            background-color: #eaeced;
+            color: #0000ee;
+            max-height: 90px;
+        }
+        div {
+            width: 150px;
+            height: 150px;
+            background-color: #a0a0a0a0;
+            background-image: url("https://www.apple.com/ac/structured-data/images/knowledge_graph_logo.png?201812022340"); /*배경이미지를 넣기위한 속성*/
+            background-repeat: no-repeat; /* no-repeat 반복하지 않는다 */
+            background-position: 50% 50%; /*이미지 파일의 위치 조절 가운데로 보낸다면 50% 50%나 center를 주면된다.*/ 
+            background-size: cover;
+        }
+        .aspect {
+            aspect-ratio:  1/1; /*요소의 크기에 대한 비율*/
+            background-color: dodgerblue;
+
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <span>hello</span>
+    <div></div>
+    <span class="aspect">hello Nice to meet you!</span>
+</body>
+</html>

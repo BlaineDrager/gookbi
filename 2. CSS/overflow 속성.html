@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>overflow 속성</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #d0d0d0;
+            font-size: 24px;
+            overflow: auto; /* scroll은 스크롤 형식으로 나타낸다 해당 요소가 넘치지 않더라도  나타난다 그렇기에 자동으로 생기게 만들고 싶다면 auto를 넣어주면된다. hidden 의 경우에는 벗어나면 숨긴다 visible 의 경우에는 그냥 보여주라는 말이다*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello Hello 
+    </div>
+</body>
+</html>

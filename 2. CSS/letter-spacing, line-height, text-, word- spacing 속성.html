@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>letter-spacing, line-height, text-, word- spacing 속성</title>
+    <style>
+        .ls {
+            font-size: 48px;
+            letter-spacing: 10px; /**/
+        }
+        .lh {
+            font-size: 24px;
+            line-height: 120%; /*줄간의 거리를 조절 px로 사용은 하지만 보통 %를 사용한다(100% 부터 시작) %의 경우는 font-size의 크기에 기준을 둔다*/
+        }
+        .ws {
+            font-size: 48px;
+            word-spacing: 50px; /*단어간의 거리를 조절하는 용도*/
+        }
+        .ta{
+            width: 500px;
+            background-color: #e0e0e0;
+            font-size: 24px;
+            text-align: center;
+        }
+        .td{
+            background-color: #000000;
+            font-size: 48px;
+            color: #10f0e3;
+            /* text-decoration: underline;  */
+            /*글자를 꾸미기 위한 것으로 underline을 넣어 밑줄을 친 선 종류를 선택했고 색상 값을 넣지않아 텍스트의 색상과 같으며 스타일도 넣지않아 solid(실선) 이 디폴트 값으로 들어갔다.*/
+            text-decoration: none;
+            text-shadow: 7px 7px 7px #cccccc; /**/
+        }
+        .td:hover {
+            text-decoration: underline;
+        }
+        .ttu {
+            font-size: 24px;
+            text-transform: uppercase; /*라틴문자를 대문자화*/
+        }
+        .ttl {
+            font-size: 24px;
+            text-transform: lowercase; /*라틴문자를 소문자화*/
+        }
+        .ttc {
+            text-transform: capitalize; /*첫자와 공백이후 첫 글자는 대문자화*/
+        }
+    </style>
+</head>
+<body>
+    <div class="ls">Hello World</div>
+    <div class="lh">Hello World Hello World Hello World Hello World Hello World Hello World Hello World Hello World </div>
+    <div class="ws">Hello World</div>
+    <div class="ta">Hello World</div>
+    <div class="td">Hello World </div>
+    <div class="ttu">Hello World</div>
+    <div class="ttl">Hello World</div>
+    <div class="ttc">hello nice to meet you. my name is kimchi su jebi.</div>
+</body>
+</html>

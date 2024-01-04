@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, Roboto, "Noto Sans KR", "Segoe UI", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+            border-color: #f0f2f4;
+        }
+
+        #main{
+            top: 50%;
+            left: 50%;
+            background-color: #ffffff;
+            position: fixed;
+            transform: translate(-50%, -50%);
+
+            border: 0.1rem solid #aeacaf;
+            padding: 7rem 3.75rem;
+            box-shadow: 0 0 1rem 0.5rem #aeacaf;
+            border-radius: 0.75rem;
+
+
+            align-items: flex-start;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 1rem;
+        }
+
+        #main > .loginName{            
+            pointer-events: none;            
+
+            font-size: 2.5rem;
+            font-weight: 300;
+            margin-top: -5rem;
+        }
+
+        #main > .loginMain > .ul {
+            position: relative;
+            margin-left: -2.325rem;
+        }
+        #main > .loginMain > .ul > .login{
+            list-style-type: none;
+        }
+
+        #main > .loginMain > .ul > .login > .accountInfo {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+        #main > .loginMain > .ul > .login > .accountInfo  >.label {
+            user-select: none;
+        }
+        #main > .loginMain > .ul > .login > .accountInfo ~ .label {
+            position: relative;
+            margin: 5rem 0 ;
+
+            
+        }
+
+        #main > .loginMain > .ul > .login > .accountInfo > .label > .text {
+            font-size: 1rem;
+            flex-grow: 1;
+        }
+
+        #main > .loginMain > .ul > .login > .accountInfo > .label > .account {
+            border: 0.175rem solid #aeecef;
+            border-radius: 0.355rem;
+            padding: 0.385rem 0;
+            margin-bottom: 0.8rem;
+        }
+
+        #main > .loginMain > .ul > .login > .accountInfo > .label > .account:hover {
+            border-color: #aeacaf;
+        }
+        
+        #main > .loginMain > .ul > .login > .accountInfo > .label > .account:focus-within {
+            border-color: #5e5c7f;
+        }
+        
+        
+        #main > .loginMain > .ul > .login > .accountInfo > .label > .account > .search {
+            flex-grow: 1;
+            border: none;
+            outline: none;
+            padding-right : 6.125rem;
+            z-index: 1;
+        }
+        #main > .loginMain > .ul > .login > .accountInfo > .label > .account > .search::placeholder {
+            font-size: 0.9rem;
+        }
+        
+        #main > .loginMain > .ul > .login > .label {
+            user-select: none;
+        }
+        
+        #main > .loginMain > .ul > .login > .loginButton > .button {
+            cursor: pointer;
+            border : 0 solid #ffffff ;
+            padding: 0.5rem 7rem;
+            color: #ffffff;
+            background-color: #8f83ff;
+            text-decoration: none;
+            border-radius: 0.4rem;
+            font-size: 1rem;
+
+            margin: 0.7rem 0;
+            
+        }
+
+        #main > .loginMain > .ul > .login > .loginButton > .button:hover {
+            background-color: #8856ff;
+        }
+
+        #main > .loginMain > .ul > .login > .loginButton > .button:active {
+            background-color: #5856ff;
+        } /*여기까지 로그인 버튼*/
+
+
+
+        #main > .loginMain > .button {
+            user-select: none;
+            margin : 0.25rem
+        } 
+        
+        #main > .loginMain > .button > .noneOrLoss > .aButton {
+            color: #8f83ff;
+            text-decoration: none;
+        }
+        
+
+        #main > .loginMain > .button > .noneOrLoss > .aButton:hover {
+            text-decoration: underline;
+        }        
+    </style>
+</head>
+<body>
+    <main id="main">
+        <span class="loginName">로그인</span>
+        <form class="loginMain">
+            <ul class="ul">
+                <li class="login">
+                    <div class="accountInfo">
+                        <label class="label">
+                            <span class="text">이메일</span>
+                            <div class="account">
+                                <input type="email" class="emailId search" placeholder="이메일을 입력해 주세요">
+                            </div>
+                        </label>
+                    </div>
+                </li>
+                <li class="login">
+                    <div class="accountInfo">
+                        <label class="label">
+                            <span class="text">비밀번호</span>
+                            <div class="account">
+                                <input type="password" class="password search" placeholder="비밀번호를 입력해 주세요">
+                            </div>
+                        </label>
+                    </div>            
+                </li>
+                <li class="login">
+                    <label class="label">
+                        <input type="checkbox" class="checkbox">
+                        <span class="text">이메일을 기억할까요?</span>
+                    </label>
+                </li>
+                <li class="login">
+                    <div class="loginButton">
+                        <input type="submit" class="button" value="로그인">
+                        <a href="#" class="button">로그인</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="button">
+                <label class="noneOrLoss">
+                    <span class="text">아직 계정이 없으신가요?</span>
+                    <a href="#" class="aButton">회원 가입</a>
+                </label>            
+            </div>
+            <div class="button">
+                <label class="noneOrLoss">
+                    <span class="text">계정 정보를 분실하셨나요?</span>
+                    <a href="#" class="aButton">계정 복구</a>
+                </label>            
+            </div>
+        </form>
+    </main>
+</body>
+</html>

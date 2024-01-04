@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .a{
+            width: 70px; /*좌우 요소 크기 조절*/
+            height: 250px; /*상하 요소 크기 조절*/
+            background-color: #ff0f71;
+            margin: 3rem; /*요소의 외부 크기 조절*/
+            /* margin: 3rem 8rem; 요소의 외부 여백 조절 각각 상하단, 좌우측의 거리이다*/
+            /* margin: 3rem 8rem 7rem 10rem; 요소의 외부 여백 조절 각각 상, 우, 하, 좌측의 거리이다*/
+            /* padding은 내부여백이 트리거가 되어서 요소 자체로 인식이 되고
+                margin은 그렇지 않다.*/
+        }
+        .b{
+            bottom: 10rem; /*요소를 움직이기 위한 것으로 하단부 부터의 거리 만큼 상단으로 움직인다*/
+            width: 80px;
+            height: 65px;
+            background-color: #5555ff;
+            margin-top: 50px;
+            margin-left: 50px;
+            padding: 4rem;
+            position: relative;
+        }
+        span {
+            padding: 50px;
+            background-color: aliceblue;
+        }
+        .c{
+            width: 200px;
+            height: 5rem;
+            background-color: aqua;
+            color: #ff00ff;
+            font-weight: 900;
+            border: 9px solid #00ff00; 
+            border-radius: 1.2rem; /*요소의 테두리를 둥글게 설정*/
+        }
+        .button{ /*버튼형식을 만들 때는 보통 top 같은 걸 사용하지 않고 padding을 이용한다.*/
+            background-color: #3498db;
+            border-radius: 1rem;
+            color: #aaff32;
+            font-size: 1.275rem;
+            display: inline-block;
+
+            padding: 8px 29px;
+            margin: 2rem;
+            border: 0.35rem solid #ecf188; /*border를 사용할 땐 넓이-스타일-색상 순으로 적어준다.*/
+        }
+        .button:hover {
+            background-color: #ff8035;
+            border: 0.35rem solid #00ffff;
+
+            
+        }
+        .circle{
+            width: 130px;
+            height: 130px;
+            background-color: #eacc71;
+            border-radius: 22%; /*radius를 지정할 때에는 px 이나 rem처럼 길이를 넣거나 왼편 처럼 % 형식으로 넣을 수 있는데 %의 경우 50%를 넘는 순간 그냥 원형이 됀다.*/
+            border: 2rem double #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <div class="a"></div>
+    <div class="b"><span>hello</span></div>
+    <button class="button">버튼</button>
+    <div class="circle"></div>
+    <div class="c">아직 초반이다 힘들어 하지말아라</div>
+</body>
+</html>

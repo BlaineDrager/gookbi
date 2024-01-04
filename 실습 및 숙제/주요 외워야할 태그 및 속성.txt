@@ -1,0 +1,15 @@
+- height, max-height, min-height, width, max-width, min-width
+- background 속성
+- border, border-radius ( -top, right 제외 )
+- bottom, left, position, right, top
+- color
+- cursor (auto, pointer 만)
+- font-family, font-size, font-weight
+- text-align, text-decoration(underline 만), white-space(nomal, nowrap만)
+- margin, padding
+- overflow
+- pointer-events
+- transform
+- transition 속성
+- user-select
+- z-index

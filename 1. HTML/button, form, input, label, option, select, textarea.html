@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button, form, input, label, option, select, textarea 태그</title>
+</head>
+<body>
+    <form>
+        <img src="https://www.ibric.org/upload/geditor/202308/0.75130100_1690953533.png" alt="">
+        <br><br>
+        <input checked type="checkbox" name="c">
+        <label>
+            <input checked type="radio" name="telecom" value="SKT">SKT
+        </label>
+        <label>
+            <input type="radio" name="telecom" value="KT">KT
+        </label>
+        <label>
+            <input type="radio" name="telecom" value="LGU+">LGU+
+        </label>
+        <!-- name을 같게 설정해야 한가지만 선택할 수 있게 된다. name을 설정하지 않으면 개별적으로 선택이 되며 선택해제가 되지 않는다. -->
+        <br><br>
+        <input type="radio" name="region" value="서울">서울
+        <input type="radio" name="region" value="대전">대전
+        <input checked type="radio" name="region" value="대구">대구
+        <input type="radio" name="region" value="부산">부산
+        <input type="radio" name="region" value="광주">광주
+        <input type="radio" name="region" value="울산">울산
+
+        <br>
+        <input name="message" type="text" >
+        <!-- name이 유일하게 서버랑 소통하는 용도이다 -->
+        <!-- email을 받아야 할 경우에는 type은 text가 아닌 email로 지정한다. -->
+        <input type="submit" value="메세지 전송">
+        <!-- type의 값에 따라 바뀐다.
+             양식을 제출할 경우에는 submit
+             id와 비밀번호같이 클라이언트에게 입력을 받아야 하는 경우에는 text
+            타입이 submit인경우 value는 값이 아닌 표시되는 text로 보면 된다. -->
+        <input type="button" value="버튼">
+        <!-- 아무역할을 가지지 않는 일반적인 버튼
+        js를 사용해야 역할이 주어진다. -->
+
+        <input type="color" name="color">
+        <br><br>
+        <input min type="number" name="n"><br>
+        <input placeholder="비밀번호 8자 이상 15자 이하" required minlength="8" maxlength="15" type="password" name="p">
+        <input type="submit" value="비밀번호 전송">
+        <input type="reset" name="r"><br>
+        <input type="date">
+        <input disabled type="reset" value="초기화"><br>
+        <input type="range"><br>
+        <input type="file" multiple accept=".jpg, .jpeg, .png">
+        <br>
+        <br>
+        <label>
+            <span>이메일</span>
+            <input name="email" placeholder="이메일을 입력해주세요" type="email">
+        <label>
+        <br>
+        <br>
+        <textarea name="" id=""></textarea><!-- 댓글이나 글종류를 쓸때 나타나는 칸을 만드는 용도로 보자 cols="30" rows="10"의 경우는 CSS로 처리하는 경우가 대부분이다-->
+        
+
+        <!-- 서버로 전송할 때 ? 부터 매개변수의 시작이다. 그리고 단 하나 밖에 없다 -->
+    </form>
+</body>
+</html>

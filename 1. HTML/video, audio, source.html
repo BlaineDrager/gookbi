@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>audio, video, source 태그</title>
+</head>
+<body>
+    <video autoplay muted controls loop src="./video/video.mp4"></video><!--autoplay muted 자동 재생 및 재생시 음소거 controls 재생 버튼 생성-->
+    <style>
+        video {
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vw;
+            size: 10rem;
+        }
+    </style>
+    <audio src=""></audio>
+    <source src=""><!--기존 재생 목록을 추가적으로 가질때 audio나 video 태그의 자식으로 들어간다 속성으로 src가 들어가며 souruce 태그가 사용될땐 부모인 audio와 video는 src속성을 넣지 않는 것이 좋다. -->
+</body>
+</html>

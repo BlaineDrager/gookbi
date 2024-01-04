@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 나중에 다시 해봐야 할 사항 */
+        .container {
+            top: 50%;
+            left: 50%;
+            width: 500px;
+            height: 500px;
+            background-color: #e0e0ef;
+            position: absolute;
+            transform: translate(-50%, -50%);
+        }
+        .container > .circle {
+            top: 50%;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: #ff0000;
+            border-radius: 50%;
+            position: absolute;
+            transform: translateY(-50%);
+
+            animation-name: ani-circle;
+            animation-play-state: running;
+            animation-iteration-count: infinite;
+            animation-duration: 5000ms;
+            animation-timing-function: linear;
+            
+        }
+        @keyframes ani-circle {
+            0% {
+                left : 0;
+                transition-duration: 1s;
+            }
+            25% {
+                top : 10%;
+                left: 40%;
+                background-color: #ff7f00;
+                transition-duration: 1s;
+            }
+            50% {
+                top: 50%;
+                left: 80%;
+                background-color: #00ff00;
+                transition-duration: 1s;
+            }
+            75%{
+                top: 90%;
+                transition-duration: 1s;
+                background-color: #0000ff;
+            }
+            100% {
+                left: 0;
+                transition-duration: 1s;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="circle"></div>
+    </div>
+</body>
+</html>

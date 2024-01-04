@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pointer-events, z-index 속성</title>
+    <style>
+        input {
+            pointer-events: none;
+        }
+        .box {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+        }
+        .box.a {
+            top: 0;
+            left: 0;
+            background-color: rebeccapurple;
+            z-index: 1; /* z축으로 배치순서를 설정하기 위한 것, 숫자가 클수록 해당 요소가 사용자에 가깝게 배치된다 */
+        }
+        .box.b {
+            top: 100px;
+            left: 100px;
+            background-color: #ff3500;
+        }
+        .box.c {
+            top: 200px;
+            left: 200px;
+            background-color: #22fe31;
+            z-index: 1; /*만약에 위의 z-index와 값이 같다면 후순위로 적용되는 이쪽이 우선권을 가진다.*/
+        }
+    </style>
+</head>
+<body>
+    <input type="text">
+    <div class="box a"></div>
+    <div class="box b"></div>
+    <div class="box c"></div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bottom, left, right, top, position 속성</title>
+    <style>
+        .top {
+            top: 0;
+            width: 300px; /*가로크기를 지정*/
+            height: 3.275rem; /*세로 크기를 지정*/
+            background-color: #b0a0ff;
+            position: fixed; /**/
+            
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            
+        }
+        .parent {
+            top: 5rem;
+            width: 500px;
+            height: 500px;
+            background-color: #ffb0a0;
+            position: absolute;
+        }
+        .parent > .child {
+            width: 200px;
+            height: 200px;
+            
+        }
+        .parent > .child.one {
+            width: 100px;
+            height: 100px;
+            background-color: #b0ffa0;
+            position: relative;
+            
+        }
+        .parent > .child.two{
+            background-color: #b0a0ff;
+            top: 100px;
+            left: 20px;
+            position: absolute; /*부모/선조가 static이 아니면 문서 자체 즉 body를 기준으로 삼는다*/
+        }
+    </style>
+</head>
+<body>
+    <thead>
+        <div class="top">헷갈리네</div>
+    </thead>
+    <div class="parent">
+        <div class="child one"></div>
+        <div class="child two"></div>
+    </div>
+</body>
+</html>

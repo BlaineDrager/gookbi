@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 500px;
+            border-radius: 20%;
+            filter: blur(2px);/**/
+        }
+        img:hover{ /*해당 요소에 마우스를 올렸을 때의 설정*/
+            filter: blur(0); /*필터의 블라인더설정 흐려짐을 지정할 수 있다*/
+        }
+        img:active{/*active 클릭했을 때의 설정*/
+            /* filter: blur(1px) brightness(1.0); */
+            filter: contrast(100%) sepia(70%);/* contrast 대비를 지정 sepia 세피아톤 지정*/
+            
+        }
+    </style>
+</head>
+<body>
+    <img src="https://img.freepik.com/premium-photo/a-hummingbird-with-a-flower-in-the-background_853177-8040.jpg" alt="">
+</body>
+</html>

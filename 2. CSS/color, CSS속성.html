@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color 속성</title>
+    <style>
+      /* div {
+        color : blue;
+      }  
+      span {
+        color: seagreen;
+        background-color: black;
+      } */
+      
+      .red {
+        color: darkmagenta;
+      }
+      .bold {
+        font-weight: bold;
+      }
+      .italic {
+        font-style: italic;
+        font-size: 2rem;
+      }
+      .italic.bob{
+        cursor: pointer;
+        display: flex;
+      }
+      .italic.bob:hover {
+        background-color: aqua;
+      }
+      .italic.bob:active {
+        background-color: #00ff00;
+      }
+      input[disabled] { /* input 태그들 중에 disabled 속성을 가지는 것들을 에 적용하는 형식*/
+        background-color: aqua;
+      }
+      [type="email"] { /*타입의 속성이 email인 것에만 적용*/
+        background-color: orange;
+      }
+      h1,h2,h3,h4,h5,h6 {
+        background-color: lawngreen;
+      }
+      .alpha > .beta {
+        font-size: 1.5rem;
+      }
+      .alpha > article > span + span {
+          font-size: initial;
+      }
+      label > .text {
+        color: #ff0000;
+      }
+
+      label > input[type=checkbox]:hover + .text {/* + 인접한 형제를 뜻한다 ~ 는 본인을 포함한 모든 형제를 뜻한다*/
+        font-size: 2rem;
+        background-color: aqua;
+        border-radius: 0.4rem;
+      }
+      /* label > .checkbox:checked + .text {
+        color: #000000;
+      } 혹은 아래처럼 */
+      input:active + .text {
+        color: blue;
+      }
+      input:checked + .text {
+        color: #000000aa;
+      }
+    </style>
+</head>
+<body>
+    <div>첫 번째 DIV</div>
+    <span>첫 번째 span</span>
+    <div>두 번째 DIV</div>
+
+    <span class="red bold italic bob">hello world</span>
+    <span class="red bold italic">hello world</span>
+    <div class="bold italic">두 번째 DIV</div>
+    <div class="class" id="loginForm"></div>
+
+
+    <input type="email"><br>
+    <input disabled type="password"><br>
+    <input type="tel"><br>
+    <input disabled type="text"><br><br>
+
+    <h1 class="red">이거슨 수류탄이여</h1>
+    <h2>이거슨 수류탄이여</h2>
+    <h3>이거슨 수류탄이여</h3>
+    <h4>이거슨 수류탄이여</h4>
+    <h5>이거슨 수류탄이여</h5>
+    <h6>이거슨 수류탄이여</h6>
+
+    <div class="alpha">
+      div 내용<br>
+      <span class="beta">안쪽 sapn 내용</span>
+      <article>
+        <span class="beta">article 안의 span 내용</span><br>
+        <span class="beta">article 안의 span 내용</span>
+      </article>
+    </div>
+    <span class="beta">바깥쪽 span 내용</span>
+    <span class="beta">바깥쪽 span 내용2</span>
+    <br><br>
+    <label>
+      <input class="checkbox" type="checkbox">
+      <span class="text">위 약관을 읽어보았으며 이해했고 동의합니다</span>
+    </label>
+</body>
+</html>

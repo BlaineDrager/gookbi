@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>select, option, optgroup 태그</title>
+</head>
+<body>
+    <select multiple name="food"><!--항목을 선택하기 위한 태그-->
+        <optgroup label="정크푸드"><!--서로 연관이 있는 option 태그를 묶어내기 위해 사용-->
+            <option value="ramyeon">라면</option><!--실질적인 값을 가지는 태그 select태그의 자손으로 쓰인다.-->
+        </optgroup>
+        <optgroup label="일식">
+            <option value="sussi">스시</option>
+            <option value="gachudong">가츠동</option>
+        </optgroup>
+        <optgroup label="고기">
+            <option value="gobchang">곱창</option>
+            <option value="samgyeobsal">삼겹살</option>
+        </optgroup>
+    </select>
+    <br>
+    <input type="submit" value="선택">
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        .parent {
+            height: 300px;
+            background-color: #e74c3c;
+            padding: 10px;
+
+            align-items: stretch; /*flex-direction의 속성에 따라 수직(다른 방향)으로 정렬을 하는 속성*/
+            display: flex; /*부모가 정해지면 자식은 아무 관계가 없다.*/
+            flex-direction: row; /*아이템의 흐름 방향을 지정하기 위해 사용 row 는 가로 column은 세로 방향이다*/
+            /*gap: 10px;*/ /*각 아이템간의 거리를 지정하기 위한것*/
+            justify-content: space-around; /*flex-direction의 속성에 따라 수평(같은 방향)으로 정렬을 하는 속성*/
+
+        }
+        .parent > .child{
+            background-color: #3498db;
+            color: #ffffff;
+            padding: 5px;
+        }
+        .parent > .spring {
+            background-color: #ace588;
+            flex-grow: 1; /*자주 사용하는 것으로 구글 기존 header의 비어있는 공간을 만들때 말한다*/
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child">a</div>
+        <div class="child">b</div>
+        <div class="child">c</div>
+        <div class="spring"></div>
+        <div class="child">d</div>
+        <div class="child">e</div>
+        <div class="child">f</div>
+    </div>
+</body>
+</html>

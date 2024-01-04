@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            top: 50%;
+            left: 50%;
+            background-color: dodgerblue;
+            color: #ffffff;
+            font-size: 33px;
+            position: absolute;
+            transform: translate(-50%, -50%);/*위의 top 과 left 에 적용 된 50%는 왼상단 모서리를 기준으로 잡기 때문에 - 붙인 상태로 같은 값을 주면 해당 요소는 중앙에 올 수 있게 된다.*/
+            transition-duration: 1750ms;
+        }
+        .box:hover {
+            transform: rotateY(270deg);
+        }
+        .box2{
+            width: 15rem;
+            height: 15rem;
+            top: 5rem;
+            left: 25%;
+            background-color: tomato;
+            position: absolute; /*절대적인 포지셔닝 static이 아닌 부모 및 선조를 기준으로 위치를 잡는다*/
+            transition-timing-function: ease ;
+            transition-duration: 2000ms;
+        }
+        .box2:hover{
+            background-color: skyblue;
+            transform: rotateZ(270deg);
+        }
+        .boxInBox{
+            width: 7rem;
+            height: 7rem;
+            top: 1rem;
+            left : 1rem;
+            background-color: black;
+            position: relative; /*상대적 포지셔닝*/
+            transition-duration: 2000ms;
+            transform: translate(50%, 50%);
+        }
+        .box2:hover > .boxInBox {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">너는<br>나의<br>크기를<br>모른다</div>
+    <div class="box2">
+        <div class="box2 boxInBox"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let nums = [1,3,5,7,9];
+        console.log( nums.every( (x) => x % 2 !== 0))
+        // {}가 없고 한줄로 작성되었다면 식 x % 2 앞에 return이 숨겨진채 존재한다
+        // nums가 가지고있는 모든 인자를 x 에 담고 각 인자를 2로 나누고 나머지가 0이 아니라면 every를 통해 true 와 false를 내놓는다
+
+        let nums2 = [1, 3, 4, 5, 7, 9];
+        console.log( nums2.some( (x) => x % 2 == 0))
+        // some을 통해 각 인자중 하나라도 참이 있으면 true를 반환하게 한다.
+        let nums3 = [7, 11, 3, 27, 21, 6];
+        console.log( nums3.find((x) => x >= 10));
+        // find를 통해 참이되는 배열의 첫번째 인자를 반환
+        console.log( nums3.findLast((x) => x >= 10));
+        // find를 통해 참이되는 배열의 마지막 인자를 반환
+        nums3.forEach((x) => console.log(x))
+        // forEach(=>) 화살표함수는 별도 반환 값은 없는 것으로 
+    </script>
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

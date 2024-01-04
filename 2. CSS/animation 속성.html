@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation 속성</title>
+    <style>
+        .container {
+            top: 50%;
+            left: 50%;
+            width: 600px;
+            height: 400px;
+            background-color: #e0e0e0;
+            position: absolute;
+            transform: translate(-50%, -50%);
+        }
+        .container > .circle {
+            top: 50%;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            background-color: #2ecc71;
+            border-radius: 50px;
+            position: absolute;
+            transform: translateY(-50%);
+            
+            animation-name: ani-circle; /*애니메이션 속성을 적용할 태그의 애니메이션 이름*/
+            animation-duration: 2000ms; /*애니메이션이 작동(왕복)하는데 걸리는 시간*/
+            animation-iteration-count: infinite; /*애니메이션 반복횟수 적용 infinite는 무한히 자연수는 그 수만큼을 반복한다*/
+            animation-play-state: paused;
+            animation-timing-function: linear; /*애니메이션 1사이클에 적용할 형식 linear는 일정한 속도로 반복 시킨다.*/
+        }
+        .container:hover > .circle {
+            /*해당 하는 자리는 위의 CSS를 수정하는 자리라고 보면된다 그렇기에 따로 animation-name 을 따로 작성할 필요는 없다*/
+            animation-play-state: running; /*우선순위가 높기 때문에 위의 play-state가 겹치더라도 위의 play-state는 무시가 된다*/
+            transition-duration: 1s;
+            background-color: #ffff00;
+        }
+        @keyframes ani-circle { /*ani-circle 라는 이름에 적용할 애니메이션*/
+                0% {
+                    left: 0;
+                }
+                
+                50% {
+                    left: 500px;
+                }
+
+                100% {
+                    left: 0;
+                }
+            }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="circle"></div>
+    </div>
+</body>
+</html>
