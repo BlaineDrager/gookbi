@@ -9,6 +9,7 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, Roboto, "Noto Sans KR", "Segoe UI", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
             border-color: #f0f2f4;
+            background-color: #ffffff;
         }
 
         #main{
@@ -150,7 +151,7 @@
                         <label class="label">
                             <span class="text">이메일</span>
                             <div class="account">
-                                <input type="email" class="emailId search" placeholder="이메일을 입력해 주세요">
+                                <input name="email" type="email" class="emailId search" placeholder="이메일을 입력해 주세요">
                             </div>
                         </label>
                     </div>
@@ -160,14 +161,14 @@
                         <label class="label">
                             <span class="text">비밀번호</span>
                             <div class="account">
-                                <input type="password" class="password search" placeholder="비밀번호를 입력해 주세요">
+                                <input name="password" type="password" class="password search" placeholder="비밀번호를 입력해 주세요">
                             </div>
                         </label>
                     </div>            
                 </li>
                 <li class="login">
                     <label class="label">
-                        <input type="checkbox" class="checkbox">
+                        <input name="loginCheck" type="checkbox" class="checkbox">
                         <span class="text">이메일을 기억할까요?</span>
                     </label>
                 </li>

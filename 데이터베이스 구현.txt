@@ -1,0 +1,87 @@
+1. CREATE USER `study`@`localhost` IDENTIFIED BY 'test1234';
+
+CREATE USER : 사용자 생성
+`study`@`localhost` : 사용자의 이름 @ 사용자의 호스트
+IDENTIFIED BY 'test1234'; 해당 사용자의 비밀번호 지정
+
+
+2. ALTER USER `study`@`localhost` IDENTIFIED BY 'test1234!';
+
+ALTER USER : 사용자 수정
+
+
+3. DROP USER `study`@`localhost`;
+
+DROP USER : 사용자 삭제
+
+
+4. GRANT CREATE, ALTER, DROP, SELECT ON *.* TO `study`@`localhost`;
+
+GRANT : 권한 부여
+CREATE, ALTER, DROP, SELECT : 부여 될 권한
+ON : 적용할 스키마와 테이블
+적용 스키마 : * (모든 스키마)
+적용 테이블 : * (모든 테이블)
+TO : 권한 부여를 적용할 스키마와 테이블을 가지고 있는 사용자
+(유저 뒤에 WITH GRANT OPTION 를 넣으면 권한 부여 권한을 가지게 된다)
+
+
+5. SHOW GRANTS FOR `study`@`localhost`;
+
+SHOW GRANTS : 권한 조회를 위한 쿼리
+FOR : 권한 조회를 할 사용자
+만약 SHOW GRANTS; 만 사용할 경우 접속해 있는 모든 사용자의 권한을 조회한다
+
+
+6. REVOKE DROP ON *.* FROM `study`@`localhost`;
+
+REVOKE : 권한 철회
+DROP : 철회할 권한
+*.* : 모든 스키마와 모든 테이블
+FROM `study`@`localhost` : 적용할 사용자
+(만약 GRANT 권한이 있다면  ON 앞에 ,GRANT OPTION 을 추가 한다)
+(권한 부여할때는 TO 철회할때에는 FROM을 사용해야하는 것을 주의해야한다)
+
+
+7. CREATE SCHEMA `test_schema`;
+
+CREATE : 만든다
+SCHEMA : 스키마를
+`test_schema` : 만들어질 스키마의 이름 ( ` ` 는 구분용으로 이름에 포함되지는 않는다)
+
+
+8. DROP SCHEMA `test_schema`;
+
+DROP : 삭제한다
+SCHEMA : 스키마를
+`test_schema` : 삭제될 스키마의 이름
+
+
+9. CREATE TABLE `korea`.`area`
+(
+	`area_code` VARCHAR(4),
+	`value`       DOUBLE UNSIGNED
+);
+
+CREATE TABLE : 테이블 생성 을 위한 쿼리
+`korea`.`area` : korea 스키마에 생성될 area라는 이름의 테이블
+() : 해당 테이블에 들어갈 레코드를 적는 장소 (열 구조)
+`area_code` 와 `value` : 테이블에 생성될 레코드
+VARCHAR(4) 와 DOUBLE UNSIGNED : 각 레코드에 적용될 데이터 타입
+DOUBLE : 실수형 데이터 타입
+
+
+10. CREATE TABLE `korea`.`populations`
+(
+	`area_code` VARCHAR(4),
+	`value`       INT UNSIGNED,
+	`as_of` 	  DATE
+);
+
+VARCHAR() : 문자형 데이터 타입으로 ()안의 값만큼의 문자를 담을 수 있음
+UNSIGNED : 정수형 데이터타입의 음수부분을 양수로 치환하는 용도
+DATE : 논리형 데이터 타입으로 년, 월, 일을 가질 수 있음
+
+// 멍청했다 문제를 잘 읽었어야지 스키마 생성은 왜 안했는가.
+
+
